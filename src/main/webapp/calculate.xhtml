@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Facelet Title</title>
+</h:head>
+<h:body>
+    <h:form style="margin:200px">
+        <span class="ui-float-label">
+            <p:inputText id="float-input-1"
+                         value="#{calculate4Methods.number1}" />
+            <p:outputLabel for="@previous" value="Sayı 1" />
+        </span>
+        <span class="ui-float-label" style="margin-top:50px">
+            <p:inputText id="float-input-2"
+                         value="#{calculate4Methods.number2}" />
+            <p:outputLabel for="@previous" value="Sayı 2" />
+        </span>
+        <p:commandButton value="Toplama" id="sum1"
+                         update="resultId"
+                         action="#{calculate4Methods.sum()}"
+                         style="margin-right:20px;margin-top:50px"
+                         styleClass="ui-priority-primary" />
+        <p:commandButton value="Çıkarma"
+                         id="diff1"
+                         update="resultId"
+                         action="#{calculate4Methods.diff()}"
+                         style="margin-right:20px;margin-top:50px"
+                         styleClass="ui-priority-primary" />
+        <p:commandButton value="Bölme"
+                         id="divide1"
+                         update="resultId"
+                         action="#{calculate4Methods.divide()}"
+                         style="margin-right:20px;margin-top:50px"
+                         styleClass="ui-priority-primary" />
+        <p:commandButton value="Çarpma"
+                         id="mul1"
+                         update="resultId"
+                         action="#{calculate4Methods.mult()}"
+                         style="margin-right:20px;margin-top:50px"
+                         styleClass="ui-priority-primary" />
+        <br />
+        <p:outputLabel style="margin-top:50px" value="Sonuç : " />
+        <p:outputLabel style="margin-top:50px" id="resultId"
+                       value="#{calculate4Methods.result}" />
+    </h:form>
+</h:body>
+</html>
