@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="helloJsf:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>helloJsf</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="helloJsf-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="helloJsf:war exploded" />
+    </root>
+  </artifact>
+</component>
