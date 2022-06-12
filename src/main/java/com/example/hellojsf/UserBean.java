@@ -17,6 +17,8 @@ public class UserBean {
     private int age;
      */
     private User user;
+
+    private User selectedUser;
     private List<User> userList;
 
     /*
@@ -28,6 +30,7 @@ public class UserBean {
 
     @PostConstruct
     public void init(){
+        selectedUser = new User();
         user = new User();
         userList = new ArrayList<>();
     }
@@ -90,5 +93,13 @@ public class UserBean {
 
     public void setUserList(List<User> userList) {
         this.userList = userList;
+    }
+
+    public User getSelectedUser() {
+        return selectedUser;
+    }
+
+    public void setSelectedUser(User selectedUser) {
+        this.selectedUser = selectedUser;
     }
 }
