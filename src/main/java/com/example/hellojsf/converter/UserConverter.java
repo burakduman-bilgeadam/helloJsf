@@ -29,7 +29,8 @@ public class UserConverter implements Converter {
     }
 
     @Override
-    public String getAsString(FacesContext facesContext, UIComponent uiComponent, Object user) {
+    public String getAsString(FacesContext facesContext,
+                              UIComponent uiComponent, Object user) {
         return String.valueOf(((User)user).getId());
     }
 
